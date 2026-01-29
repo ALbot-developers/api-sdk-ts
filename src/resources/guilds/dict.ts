@@ -41,12 +41,12 @@ export interface DictRetrieveResponse {
 
 export namespace DictRetrieveResponse {
   export interface Data {
-    dict: unknown;
+    dict: { [key: string]: unknown };
   }
 }
 
 export interface DictReplaceParams {
-  dict: unknown;
+  dict: { [key: string]: unknown };
 }
 
 export declare namespace Dict {
