@@ -12,10 +12,8 @@ jobs:
     if: github.repository == 'ALbot-developers/api-sdk-ts' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch' || startsWith(github.head_ref, 'release-please') || github.head_ref == 'next')
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Check release environment
         run: |
           bash ./bin/check-release-environment
-        env:
-

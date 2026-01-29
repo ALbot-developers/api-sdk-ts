@@ -143,13 +143,13 @@ export namespace GuildCreateConnectionStatesResponse {
 
       custom_voice: string | null;
 
-      dict: unknown;
+      dict: { [key: string]: unknown };
 
       dict_keys: Array<unknown>;
 
       guild_id: number;
 
-      language_code: 'auto' | (string & {});
+      language_code: 'auto';
 
       read_guild: boolean;
 
@@ -202,12 +202,12 @@ export interface GuildCreateConnectionStatesParams {
 
 export interface GuildCreateQuickReportParams {
   /**
-   * Body param:
+   * Body param
    */
   category: string;
 
   /**
-   * Body param:
+   * Body param
    */
   description: string;
 

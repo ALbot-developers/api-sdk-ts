@@ -34,7 +34,7 @@ describe('resource dict', () => {
 
   // Prism tests are disabled
   test.skip('replace: only required params', async () => {
-    const responsePromise = client.guilds.dict.replace(0, { dict: {} });
+    const responsePromise = client.guilds.dict.replace(0, { dict: { foo: 'bar' } });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -46,6 +46,6 @@ describe('resource dict', () => {
 
   // Prism tests are disabled
   test.skip('replace: required and optional params', async () => {
-    const response = await client.guilds.dict.replace(0, { dict: {} });
+    const response = await client.guilds.dict.replace(0, { dict: { foo: 'bar' } });
   });
 });
