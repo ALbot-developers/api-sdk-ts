@@ -1,6 +1,6 @@
 {
   "name": "albot-api-sdk",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "The official TypeScript library for the Albot API SDK API",
   "author": "Albot API SDK <>",
   "types": "dist/index.d.ts",
