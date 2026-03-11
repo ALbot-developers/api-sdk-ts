@@ -8,7 +8,7 @@ const client = new AlbotAPISDK({
 });
 
 describe('resource me', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('createCheckoutSession: only required params', async () => {
     const responsePromise = client.users.me.createCheckoutSession({ plan: 'plan' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,12 +20,12 @@ describe('resource me', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('createCheckoutSession: required and optional params', async () => {
     const response = await client.users.me.createCheckoutSession({ plan: 'plan' });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveInfo', async () => {
     const responsePromise = client.users.me.retrieveInfo();
     const rawResponse = await responsePromise.asResponse();

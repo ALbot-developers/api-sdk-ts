@@ -8,7 +8,7 @@ const client = new AlbotAPISDK({
 });
 
 describe('resource characterUsage', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.guilds.characterUsage.retrieve(0);
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource characterUsage', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update', async () => {
     const responsePromise = client.guilds.characterUsage.update(0, {});
     const rawResponse = await responsePromise.asResponse();

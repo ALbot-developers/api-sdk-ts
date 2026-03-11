@@ -8,7 +8,7 @@ const client = new AlbotAPISDK({
 });
 
 describe('resource trustedRoles', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update', async () => {
     const responsePromise = client.guilds.trustedRoles.update(0, {});
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource trustedRoles', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.guilds.trustedRoles.list(0);
     const rawResponse = await responsePromise.asResponse();

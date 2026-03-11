@@ -8,7 +8,7 @@ const client = new AlbotAPISDK({
 });
 
 describe('resource oauth2', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('callback: only required params', async () => {
     const responsePromise = client.oauth2.callback({ code: 'code', state: 'state' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,12 +20,12 @@ describe('resource oauth2', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('callback: required and optional params', async () => {
     const response = await client.oauth2.callback({ code: 'code', state: 'state' });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('logout', async () => {
     const responsePromise = client.oauth2.logout();
     const rawResponse = await responsePromise.asResponse();
@@ -37,7 +37,7 @@ describe('resource oauth2', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('redirect: only required params', async () => {
     const responsePromise = client.oauth2.redirect({ redirect: 'redirect' });
     const rawResponse = await responsePromise.asResponse();
@@ -49,7 +49,7 @@ describe('resource oauth2', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('redirect: required and optional params', async () => {
     const response = await client.oauth2.redirect({ redirect: 'redirect' });
   });

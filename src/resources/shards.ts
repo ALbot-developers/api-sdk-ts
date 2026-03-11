@@ -96,7 +96,7 @@ export interface ShardGetConnectionCommandsResponse {
 
 export namespace ShardGetConnectionCommandsResponse {
   export interface Data {
-    commands: unknown;
+    commands: { [key: string]: unknown };
   }
 }
 

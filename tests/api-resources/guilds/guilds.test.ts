@@ -8,7 +8,7 @@ const client = new AlbotAPISDK({
 });
 
 describe('resource guilds', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create', async () => {
     const responsePromise = client.guilds.create(0);
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource guilds', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.guilds.delete(0);
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource guilds', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('createConnectionStates: only required params', async () => {
     const responsePromise = client.guilds.createConnectionStates(0, { tc_id: 0, vc_id: 0 });
     const rawResponse = await responsePromise.asResponse();
@@ -44,12 +44,13 @@ describe('resource guilds', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('createConnectionStates: required and optional params', async () => {
     const response = await client.guilds.createConnectionStates(0, {
       tc_id: 0,
       vc_id: 0,
       character_limit: 0,
+      custom_voice: 'custom_voice',
       lang: 'lang',
       read_guild: true,
       read_name: true,
@@ -58,7 +59,7 @@ describe('resource guilds', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('createQuickReport: only required params', async () => {
     const responsePromise = client.guilds.createQuickReport(0, {
       category: 'category',
@@ -74,7 +75,7 @@ describe('resource guilds', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('createQuickReport: required and optional params', async () => {
     const response = await client.guilds.createQuickReport(0, {
       category: 'category',
@@ -83,7 +84,7 @@ describe('resource guilds', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('listSubscriptions', async () => {
     const responsePromise = client.guilds.listSubscriptions(0);
     const rawResponse = await responsePromise.asResponse();

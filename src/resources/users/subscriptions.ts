@@ -54,12 +54,12 @@ export class Subscriptions extends APIResource {
 
 export interface SubscriptionActivateParams {
   /**
-   * Path param:
+   * Path param
    */
   user_id: number;
 
   /**
-   * Body param:
+   * Body param
    */
   guild_id: number;
 }
@@ -70,12 +70,12 @@ export interface SubscriptionCancelParams {
 
 export interface SubscriptionRenewParams {
   /**
-   * Path param:
+   * Path param
    */
   user_id: number;
 
   /**
-   * Body param:
+   * Body param
    */
   new_plan: string;
 }
