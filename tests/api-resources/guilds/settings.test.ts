@@ -8,7 +8,7 @@ const client = new AlbotAPISDK({
 });
 
 describe('resource settings', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.guilds.settings.retrieve(0);
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource settings', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update', async () => {
     const responsePromise = client.guilds.settings.update(0, {});
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource settings', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.guilds.settings.delete(0);
     const rawResponse = await responsePromise.asResponse();

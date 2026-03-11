@@ -76,6 +76,9 @@ export namespace SettingRetrieveResponse {
 export interface SettingUpdateParams {
   audio_api?: 'gtts' | 'openai' | null;
 
+  /**
+   * Maximum character limit for messages
+   */
   character_limit?: number | null;
 
   custom_voice?: string | null;
@@ -92,6 +95,9 @@ export interface SettingUpdateParams {
 
   read_not_joined_users?: boolean | null;
 
+  /**
+   * Speech speed multiplier
+   */
   speech_speed?: number | null;
 
   translate?: boolean | null;

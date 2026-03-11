@@ -8,7 +8,7 @@ const client = new AlbotAPISDK({
 });
 
 describe('resource subscriptions', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.users.me.subscriptions.list();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource subscriptions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('activate: only required params', async () => {
     const responsePromise = client.users.me.subscriptions.activate('sub_id', { guild_id: 0 });
     const rawResponse = await responsePromise.asResponse();
@@ -32,12 +32,12 @@ describe('resource subscriptions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('activate: required and optional params', async () => {
     const response = await client.users.me.subscriptions.activate('sub_id', { guild_id: 0 });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('cancel', async () => {
     const responsePromise = client.users.me.subscriptions.cancel('sub_id');
     const rawResponse = await responsePromise.asResponse();
@@ -49,7 +49,7 @@ describe('resource subscriptions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('renew: only required params', async () => {
     const responsePromise = client.users.me.subscriptions.renew('sub_id', { new_plan: 'new_plan' });
     const rawResponse = await responsePromise.asResponse();
@@ -61,7 +61,7 @@ describe('resource subscriptions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('renew: required and optional params', async () => {
     const response = await client.users.me.subscriptions.renew('sub_id', { new_plan: 'new_plan' });
   });
