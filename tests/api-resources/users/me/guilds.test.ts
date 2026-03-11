@@ -8,7 +8,7 @@ const client = new AlbotAPISDK({
 });
 
 describe('resource guilds', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.users.me.guilds.list();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource guilds', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -28,7 +28,7 @@ describe('resource guilds', () => {
     ).rejects.toThrow(AlbotAPISDK.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveInfo', async () => {
     const responsePromise = client.users.me.guilds.retrieveInfo(0);
     const rawResponse = await responsePromise.asResponse();

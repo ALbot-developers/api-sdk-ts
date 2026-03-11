@@ -8,7 +8,7 @@ const client = new AlbotAPISDK({
 });
 
 describe('resource webhooks', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('createStripe', async () => {
     const responsePromise = client.webhooks.createStripe();
     const rawResponse = await responsePromise.asResponse();

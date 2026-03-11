@@ -189,6 +189,8 @@ export interface GuildCreateConnectionStatesParams {
 
   character_limit?: number | null;
 
+  custom_voice?: string | null;
+
   lang?: string | null;
 
   read_guild?: boolean | null;
